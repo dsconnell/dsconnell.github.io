@@ -4,10 +4,23 @@
 	margin-bottom: 1em;
 }
 
+.bodytext h3 {
+	color: #003262;
+}
+
+.bodytext a {
+	color: #C4820E;
+}
+
+.bodytext a:visited {
+	color: #C4820E;
+}
+
+.bodytext a:hover {
+	color: #C4820E;
+}
+
 .bodytext {
 	
 }
 
-#mepic {
-	max-width:300px;
-}

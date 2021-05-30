@@ -1,24 +1,23 @@
 .title {
-	color: #46535E;
 	margin-top: 2em;
 	margin-bottom: 1em;
 }
 
 .bodytext h3 {
-	color: #46535E;
+	
 }
 
 .bodytext a {
-	color: #92886A;
+	color: #BB261A;
 	style:
 }
 
 .bodytext a:visited {
-	color: #92886A;
+	color: #BB261A;
 }
 
 .bodytext a:hover {
-	color: #92886A;
+	color: #BB261A;
 	text-decoration: underline;
 }
 

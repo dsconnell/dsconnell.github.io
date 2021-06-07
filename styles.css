@@ -3,6 +3,10 @@
 	margin-bottom: 1em;
 }
 
+.bodytext {
+	
+}
+
 .bodytext h3 {
 	
 }
@@ -21,7 +25,10 @@
 	text-decoration: underline;
 }
 
-.bodytext {
-	
+.caption {
+	font-style: italic;
+	color: #666666;
 }
+
+
 

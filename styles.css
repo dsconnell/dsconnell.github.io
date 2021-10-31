@@ -13,7 +13,7 @@
 
 .bodytext a {
 	color: #3B7EA1;
-	style:
+	text-decoration: underline;
 }
 
 .bodytext a:visited {

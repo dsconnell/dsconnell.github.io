@@ -8,13 +8,12 @@ Read about some of my projects at the links below.
 
 ## Portfolio
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+- [MPH Capstone Project on pesticide notification policy](/mph-capstone)
+- [GIS at CalEPA's OEHHA](/oehha)
+- [GIS and field work at Saguaro National Park](/saguaro)
+- [Environmental policy paper on the Clean Water Rule](/clean-water-rule)
+- [Undergraduate Capstone Project on carbon storage](/capstone)
+- [Land cover classifications at RIT](/land-cover-classification)
 
 ## Contact
 

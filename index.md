@@ -4,9 +4,10 @@ layout: home
 
 I'm an Instructional Designer at UC Berkeley School of Public Health. In 2021 I graduated from that same school with a Master’s in global health and environment. In 2017 I got my environmental science BS with a software engineering minor from Rochester Institute of Technology.
 
-Read about some of my projects at the links below.
 
 ## Portfolio
+
+Read about some of my projects at the links below.
 
 - [MPH Capstone Project on pesticide notification policy](/projects/mph-capstone)
 - [GIS at CalEPA's OEHHA](/projects/oehha)
@@ -16,6 +17,8 @@ Read about some of my projects at the links below.
 - [Land cover classifications at RIT](/projects/land-cover-classification)
 
 ## Blog Posts
+
+<img src="images/construction.gif">
 
 <ul>
   {% for post in site.posts %}

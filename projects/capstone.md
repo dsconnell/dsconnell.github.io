@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Undergraduate Capstone Project on carbon storage"
 date: 2019-12-31
-categories: portfolio
 description: "Undergraduate Capstone Project in Environmental Science: modeling and mapping carbon storage on RIT's campus"
 ---
 

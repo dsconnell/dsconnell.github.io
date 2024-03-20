@@ -2,7 +2,6 @@
 layout: page
 title: "MPH Capstone Project on pesticide notification policy"
 date: 2021-06-01
-categories: portfolio
 description: "Graduate Capstone Project: evaluating the policy debate over public pesticide notification in Kern County, CA"
 ---
 

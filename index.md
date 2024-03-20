@@ -15,9 +15,15 @@ Read about some of my projects at the links below.
 - [Undergraduate Capstone Project on carbon storage](/projects/capstone)
 - [Land cover classifications at RIT](/projects/land-cover-classification)
 
-## Contact
+## Blog
 
-[Email me](mailto:davidconnell@berkeley.edu) or DM me [on Mastodon](https://idlethumbs.social/@dc).
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
 ## Acknowledgements
 

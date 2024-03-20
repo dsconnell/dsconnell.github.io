@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: page
 title: "GIS and field work at Saguaro National Park"
 date: 2021-06-01
-categories: portfolio
 description: "GIS and field work at Saguaro National Park"
 ---
 

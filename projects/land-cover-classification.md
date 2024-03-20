@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Land cover classifications at RIT"
 date: 2019-12-31
-categories: portfolio
 description: "Creation and Assessment of land cover classifications at RIT"
 ---
 

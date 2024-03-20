@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Environmental policy paper on the Clean Water Rule"
 date: 2019-06-01
-categories: portfolio
 description: "Environmental policy paper: Why the Clean Water Rule should be refined, not retracted"
 ---
 

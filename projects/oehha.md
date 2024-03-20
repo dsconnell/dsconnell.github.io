@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: page
 title: "GIS at CalEPA's OEHHA"
 date: 2021-06-01
-categories: portfolio
 description: "Geographic Information Systems, statistics, coding, and study design at CalEPA's Office of Environmental Health Hazard Assessment (OEHHA)"
 ---
 

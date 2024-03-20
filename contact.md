@@ -3,13 +3,13 @@ layout: page
 title: "Contact Me"
 ---
 
-[Email me](mailto:davidconnell@berkeley.edu)
+<a href="mailto:davidconnell@berkeley.edu" class="btn linktree"><img src="images/gmail.svg">Email</a>
 
-[Mastodon](https://idlethumbs.social/@dc)
+<a href="https://www.instagram.com/dsammyc" class="btn linktree"><img src="images/instagram.svg">Instagram</a>
 
-[GitHub](https://github.com/dsconnell)
+<a href="https://idlethumbs.social/@dc" rel="me" class="btn linktree"><img src="images/mastodon.svg">Mastodon</a>
 
-<a href="https://www.linkedin.com/in/david-s-connell/" rel="me">LinkedIn</a>
+<a href="https://github.com/dsconnell" class="btn linktree"><img src="images/github.svg">GitHub</a>
 
-<a href="https://idlethumbs.social/@dc" rel="me">Mastodon</a>
+<a href="https://www.linkedin.com/in/david-s-connell/" rel="me" class="btn linktree"><img src="images/linkedin.svg">LinkedIn</a>
 

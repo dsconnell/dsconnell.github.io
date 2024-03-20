@@ -15,12 +15,12 @@ Read about some of my projects at the links below.
 - [Undergraduate Capstone Project on carbon storage](/projects/capstone)
 - [Land cover classifications at RIT](/projects/land-cover-classification)
 
-## Blog
+## Blog Posts
 
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.title }} ({{ post.date | date: "%B %-d, %Y" }})</a>
     </li>
   {% endfor %}
 </ul>

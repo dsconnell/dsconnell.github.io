@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "MPH Capstone Project on pesticide notification policy"
 date: 2021-06-01
 categories: portfolio

@@ -18,8 +18,6 @@ Read about some of my projects at the links below.
 
 ## Blog Posts
 
-<img src="images/construction.gif">
-
 <ul>
   {% for post in site.posts %}
     <li>

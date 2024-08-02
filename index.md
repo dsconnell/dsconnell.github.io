@@ -10,6 +10,7 @@ I'm an Instructional Designer at UC Berkeley School of Public Health. In 2021 I 
 Read about some of my projects at the links below.
 
 - [MPH Capstone Project on pesticide notification policy](/projects/mph-capstone)
+- [Op-ed in the Bakersfield Californian on pesticide notification policy](/projects/capstone-op-ed)
 - [GIS at CalEPA's OEHHA](/projects/oehha)
 - [GIS and field work at Saguaro National Park](/projects/saguaro)
 - [Environmental policy paper on the Clean Water Rule](/projects/clean-water-rule)

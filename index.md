@@ -2,7 +2,7 @@
 layout: home
 ---
 
-I'm an air pollution specialist at [California's Air Resources Board](https://ww2.arb.ca.gov/our-work/topics/enforcement). In 2021 I graduated from UC Berkeley School of Public Health with a Master’s in global health and environment. In 2017 I got my environmental science BS with a software engineering minor from Rochester Institute of Technology.
+I work at [California's Air Resources Board](https://ww2.arb.ca.gov/our-work/topics/enforcement). In 2021 I graduated from UC Berkeley School of Public Health with a Master’s in global health and environment. In 2017 I got my environmental science BS with a software engineering minor from Rochester Institute of Technology.
 
 
 ## Portfolio
@@ -17,6 +17,7 @@ Read about some of my projects at the links below.
 - [Undergraduate Capstone Project on carbon storage](/projects/capstone)
 - [Land cover classifications at RIT](/projects/land-cover-classification)
 
+<!--
 ## Blog Posts
 
 <ul>
@@ -26,6 +27,7 @@ Read about some of my projects at the links below.
     </li>
   {% endfor %}
 </ul>
+-->
 
 ## Acknowledgements
 

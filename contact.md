@@ -13,5 +13,3 @@ title: "Contact Me"
 
 <a href="https://github.com/dsconnell" class="btn linktree"><img src="images/github.svg">GitHub</a>
 
-<a href="https://www.linkedin.com/in/david-s-connell/" rel="me" class="btn linktree"><img src="images/linkedin.svg">LinkedIn</a>
-

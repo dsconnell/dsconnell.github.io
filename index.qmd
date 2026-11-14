@@ -1,0 +1,36 @@
+---
+title: "David Connell"
+toc: false
+about:
+  template: solana
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:davidconnell@berkeley.edu
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/dsammyc
+    - icon: mastodon
+      text: Mastodon
+      href: https://idlethumbs.social/@dc
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/dsammyc.bsky.social
+listing:
+  contents: portfolio
+  id: portfolio
+  sort: "date desc"
+  type: default
+  fields: [description, date]
+---
+
+I work at the [California Air Resources Board](https://ww2.arb.ca.gov/). In 2021 I graduated from UC Berkeley School of Public Health with a Master’s in global health and environment. In 2017 I got my environmental science BS with a software engineering minor from Rochester Institute of Technology.
+
+## Portfolio
+
+::: {#portfolio}
+:::
+
+## Acknowledgements
+
+I live and work on [unceded Cahuilla land](https://cahuilla-nsn.gov/).

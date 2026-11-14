@@ -1,0 +1,13 @@
+---
+title: "Blog"
+toc: false
+listing:
+  contents: blog
+  sort: "date desc"
+  type: default
+---
+
+![](images/construction.gif)
+
+::: {#blog}
+:::

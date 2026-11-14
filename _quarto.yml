@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "David Connell"
+  navbar:
+    title: false
+    left:
+      - href: index.qmd
+        text: Home
+      - href: blog.qmd
+        text: Blog
+      - href: facts.qmd
+        text: Facts
+
+format:
+  html:
+    theme:
+      - quartz
+      - brand
+    css: styles.css
+    toc: true
+
+editor: source
+

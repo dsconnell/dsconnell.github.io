@@ -1,0 +1,13 @@
+---
+title: "Facts"
+toc: false
+listing:
+  contents: facts
+  sort: "date desc"
+  type: default
+---
+
+![](images/construction.gif)
+
+::: {#facts}
+:::

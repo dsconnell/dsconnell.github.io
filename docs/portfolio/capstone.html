@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2017-12-31">
+<meta name="description" content="Undergraduate Capstone Project in Environmental Science: modeling and mapping carbon storage on RIT’s campus">
+
+<title>Undergraduate Capstone Project on carbon storage – David Connell</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e63a6d4442c7fd97bdaaeca52b07098d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../facts.html"> 
+<span class="menu-text">Facts</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#soil-carbon" id="toc-soil-carbon" class="nav-link" data-scroll-target="#soil-carbon">Soil Carbon</a></li>
+  <li><a href="#tree-carbon" id="toc-tree-carbon" class="nav-link" data-scroll-target="#tree-carbon">Tree Carbon</a></li>
+  <li><a href="#grass-carbon" id="toc-grass-carbon" class="nav-link" data-scroll-target="#grass-carbon">Grass Carbon</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#soil-carbon-1" id="toc-soil-carbon-1" class="nav-link" data-scroll-target="#soil-carbon-1">Soil Carbon</a></li>
+  <li><a href="#tree-carbon-1" id="toc-tree-carbon-1" class="nav-link" data-scroll-target="#tree-carbon-1">Tree Carbon</a></li>
+  <li><a href="#grass-carbon-1" id="toc-grass-carbon-1" class="nav-link" data-scroll-target="#grass-carbon-1">Grass Carbon</a></li>
+  <li><a href="#modeling-1" id="toc-modeling-1" class="nav-link" data-scroll-target="#modeling-1">Modeling</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Undergraduate Capstone Project on carbon storage</h1>
+</div>
+
+<div>
+  <div class="description">
+    Undergraduate Capstone Project in Environmental Science: modeling and mapping carbon storage on RIT’s campus
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 31, 2017</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>As the climate changes due to anthropogenic greenhouse gas emissions, quantifying the carbon storage capability of our natural resources is only going to become more important. To mitigate its role in climate change, Rochester Institute of Technology (RIT) is seeking to achieve carbon neutrality by 2030. In service of that ultimate goal, the main objective of my senior capstone project at RIT was to identify the carbon storage and sequestration potential of various land covers on campus. To accomplish this, <strong>we sampled soil carbon across RIT’s property and measured vegetation carbon in prominent land covers</strong>. At the end of this year-long project, <strong>I delivered static carbon maps to visualize locations with high carbon storage</strong> for RIT land management decision makers, and <strong>I built a workflow for estimating carbon storage in any location on campus using a custom ArcGIS Online map and an Excel spreadsheet</strong>. Our secondary objective was to collect baseline carbon flux data on campus; for this purpose <strong>we designed and carried out an experiment to compare the carbon sequestration abilities of unmowed and consistently-mowed grass plots</strong>. Our results suggest mowed plots store more carbon, but there are significant caveats. Lastly, we adapted our methods for measuring carbon storage for use by others, including RIT freshmen students and fifth-grade girl scouts, and taught both groups about carbon sequestration and how they can measure it.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Anthropogenic greenhouse gases emissions continue to alter the climate of our planet, increasing the average global temperature, causing glacial retreat, melting arctic ice, and contributing to rising sea levels (IPCC 2014). Climate change is an enormous issue affecting every member of Earth’s biosphere, which is why Rochester Institute of Technology (RIT) is trying to do its part by becoming carbon neutral by 2030. To reach this goal, the Senior Sustainability Advisor to the President of RIT asked senior students in the school’s Environmental Science program to develop methods and tools for estimating carbon storage and sequestration across campus. These tools and associated data will allow Ms.&nbsp;Cardinal and other decision makers to more accurately balance the school’s carbon budget.</p>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="soil-carbon" class="level3">
+<h3 class="anchored" data-anchor-id="soil-carbon">Soil Carbon</h3>
+<p>We generated stratified random sample locations based on soil type polygons obtained from the Natural Resources Conservation Service. At each sample site we took three bulk density samples before doing loss on ignition tests to determine the average carbon content (percent) at each location. With bulk density and carbon content data, we calculated the expected below-ground carbon areal density (kilograms Carbon per square meter). I used ArcGIS software to interpolate between hundreds of soil samples, generating a static soil carbon map.</p>
+</section>
+<section id="tree-carbon" class="level3">
+<h3 class="anchored" data-anchor-id="tree-carbon">Tree Carbon</h3>
+<p>We generated stratified random sample locations based on the type of forest cover as indicated by the 2011 National Land Cover Database, and then measured the height and diameter of every tree within each sample plot. The carbon stored in each tree was estimated using equations found in literature (Tritton and Hornbeck 1982, Lamlom and Savidge 2003). Summing all tree carbon in a plot yielded the desired metric: expected above-ground carbon areal density in kilograms of Carbon per square meter.</p>
+</section>
+<section id="grass-carbon" class="level3">
+<h3 class="anchored" data-anchor-id="grass-carbon">Grass Carbon</h3>
+<p>We fenced off four unique turf grass plots on campus that fit six quadrats each (three treatment and three control). Over five months, we clipped the grass in the treatment plots to three inches and collected, dried, and weighed the grass clippings to determine the biomass and carbon accumulated over time. At the end of the study we also clipped the grass in the control quadrats to three inches, and compared the the average carbon sequestered in the treatment quadrats to that of the control quadrats.</p>
+</section>
+<section id="modeling" class="level3">
+<h3 class="anchored" data-anchor-id="modeling">Modeling</h3>
+<p>To estimate carbon storage in areas we didn’t directly sample I did regression analyses in R with different combinations of explanatory variables, including soil type, land cover, and the team gathering the data. I analyzed each potential model based on their R-squared values and the results of ANOVA tests. The linear regression with the best fit was used to create a spreadsheet that calculates total above- and below-ground carbon in an area based on soil type and land cover. I made an interactive map in ArcGIS Online that allows the user to create a custom polygon and calculate the area inside that polygon containing each unique combination of soil type and land cover.</p>
+</section>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+<section id="soil-carbon-1" class="level3">
+<h3 class="anchored" data-anchor-id="soil-carbon-1">Soil Carbon</h3>
+<p>A linear regression analysis of 234 total soil samples collected by my group and a former student revealed that soil type alone accounts for 20.5% of the variation in soil carbon on campus.</p>
+<p>Considering all 234 samples, the histogram on the left in Figure 1 clearly shows that our soil carbon data is heavily skewed to the right. In other words, the vast majority of samples were between 1% and 5% carbon. On the other hand, a Q-Q plot (center) suggests the bulk density of those same samples is normally distributed, with most samples having bulk density around 1-1.5 g/cm3, as seen on the right.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fig1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: On the left is a histogram showing the frequency of soil carbon percentages. The center graph shows that the distribution of bulk density values is approximitely normal, and the histogram on the right shows the frequency of soil bulk density values.</figcaption>
+</figure>
+</div>
+<p>Our soil samples confirmed that emergent and woody wetlands tend to store the most carbon in their soils, as seen below. Developed land covers store the least because there’s minimal vegetation to decay and contribute carbon to those soils.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fig2.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2: Carbon content of 234 soil samples by NLCD land cover description. Both types of wetlands have the highest carbon storage capability and developed areas have the lowest.</figcaption>
+</figure>
+</div>
+</section>
+<section id="tree-carbon-1" class="level3">
+<h3 class="anchored" data-anchor-id="tree-carbon-1">Tree Carbon</h3>
+<p>Our tree measurements in 21 plots across campus estimate there’s 123 kilograms of Carbon per square meter in deciduous forests, 130 in mixed forests (deciduous and evergreen), and 75 in woody wetlands. The wetland forests on campus have much lower tree density than the other two types, leading to this lower carbon density, but it is likely an underestimate. If we developed a method for quantifying carbon in dead tree biomass, which is prolific in the woody wetlands, that value would be much higher.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fig3.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3: The estimated aboveground carbon storage for the different forest types on the RIT campus based on 21 samples.</figcaption>
+</figure>
+</div>
+</section>
+<section id="grass-carbon-1" class="level3">
+<h3 class="anchored" data-anchor-id="grass-carbon-1">Grass Carbon</h3>
+<p>The methods that inspired our procedure for measuring grass carbon called for clipping the “stubble” biomass (everything below 3 inches) in a subsection of each quadrat and extrapolating it to the whole quadrat to estimate total biomass and carbon content. We tried this, but found it skewed the results—each subplot was about 69 times smaller than quadrat itself, leaving too much room for error. Our results with just the biomass clipped above 3 inches refute our hypothesis that unmowed plots sequester more carbon; control plots (unmowed) stored significantly more carbon than the treatment plots, as shown in the bar chart below (p=0.098). One caveat regarding result is that data was only collected over half of a growing season; future students working this project should collect data for the entirety of the growing season.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fig4.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4: The amount of carbon (g) clipped above three inches over the course of the study period. Three inches is the typical mowing height used by RIT groundskeeping. Error bars represent one standard deviation. A T-test reveals there is significant difference between the control and treatment sites at the 90% level of significance (p=0.098).</figcaption>
+</figure>
+</div>
+</section>
+<section id="modeling-1" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-1">Modeling</h3>
+<p>To model above-ground carbon, we applied the average carbon values calculated from our data or found literature to the matching polygons in the land cover database. The resulting aboveground carbon density map is pictured below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fig5.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5: Aboveground carbon content matched to land covers as classified in the 2011 National Land Cover Database (Figure 5). The values for carbon content came from a combination of our own research and literature.</figcaption>
+</figure>
+</div>
+<p>I used ArcGIS Online to interpolate between the carbon density values measured at the 234 soil points on campus, creating the below-ground carbon map included below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fig6.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6: A map of soil carbon content on campus interpolated from 234 soil samples. Darker areas are expected to have more carbon in their soils.</figcaption>
+</figure>
+</div>
+<p>I added the interpolated soil carbon map to the aboveground carbon map, creating a single map for estimating total carbon storage above- and below-ground seen below. This map will allow our client and others making land-use decisions at RIT to quickly visualize areas with high carbon storage, which appear dark red. From a carbon neutrality perspective, lighter areas on the map should be preferred for development, since destroying the vegetation won’t contribute as much to RIT’s carbon deficit.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fig7.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7: Total above- and below-ground carbon in kg/m2. This is a combination of the interpolated soil map (Figure 6) and the NLCD 2011 aboveground carbon map (Figure 5).</figcaption>
+</figure>
+</div>
+<p>A linear regression analysis including soil carbon, land cover, and an interaction term between them as the explanatory variables found they explain 27% of the variation in soil carbon on campus (adjusted R-squared = 0.27). ANOVA analysis of this regression shows that both soil type and the interaction term are significant predictors (p &lt; 0.001 and p = 0.07253, respectively) but land cover is not a great predictor (p = 0.13598). We think the low-resolution (30 meter pixels) 2011 National Land Cover Database is a factor in that variable’s low predictive value; <a href="../portfolio/land-cover-classification.html">in another project</a>, I created a better land cover database for RIT that will hopefully improve this model.</p>
+<p>I integrated the regression equation into an Excel spreadsheet that our client can use to estimate total above- and below-ground carbon inside a polygon she draws in ArcGIS Online. Access to this online tool is restricted to RIT students and employees.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Analysis of our soil samples revealed soil type and land cover are the known driving factors for soil carbon storage, but together they only account for less than 30% of soil carbon variation, according to our regression analysis. Further work must be conducted to determine what variables can explain the remaining variation in soil carbon storage. A comparison of mowed and unmowed grass found that mowed plots stored significantly more carbon than the unmowed plots from August through November 2017, refuting our hypothesis. Deciduous and mixed forests at RIT store more carbon than wetland forests, likely due to their higher density. Our fieldwork and analysis culminated in two major deliverables our client can use. First, there’s the total above- and below-ground carbon density map displayed in Figure 7 above clearly highlight the areas on campus with the highest carbon storage capabilities. Our client can use that map to defend carbon-dense areas from development as she seeks to meet RIT’s carbon neutrality target. Second, we delivered an interactive ArcGIS Online map that can be used in combination with a provided Excel spreadsheet to estimate total carbon storage in a user-selected area on campus. Land management decision makers can use this to compare the carbon impacts of developing different areas of campus. Together, these tools will allow our client and other RIT officials to make well informed, strategic land alteration decisions to meet the carbon neutrality goal set forth in RIT’s Climate Action Plan.</p>
+<p>Future RIT students who pick up this project should test the accuracy of our model by measuring above- and below-ground carbon storage in randomly-generated sampling locations all across campus. We completed our model right before we graduated, so the next group should prioritize the collection of ground truth data for testing purposes. They should also measure carbon storage in prominent land covers we did not test, like emergent wetlands and shrublands, and in carbon pools we didn’t include, like dead biomass and root systems.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>IPCC, 2014: Climate Change 2014: Synthesis Report. Contribution of Working Groups I, II and III to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, R.K. Pachauri and L.A. Meyer (eds.)]. IPCC, Geneva, Switzerland, 151 pp.&nbsp;<a href="http://www.ipcc.ch/report/ar5/syr/" class="uri">http://www.ipcc.ch/report/ar5/syr/</a></p>
+<p>Lamlom, S. H., &amp; Savidge, R. A. (2003). A reassessment of carbon content in wood: variation within and between 41 North American species. Biomass and Bioenergy, 25(4), 381-388. <a href="http://www.sciencedirect.com/science/article/pii/S0961953403000333" class="uri">http://www.sciencedirect.com/science/article/pii/S0961953403000333</a></p>
+<p>Tritton, Louise M.; Hornbeck, James W. (1982). Biomass equations for major tree species of the Northeast. Gen.&nbsp;Tech. Rep.&nbsp;NE-69. Broomall, PA: U.S. Department of Agriculture, Forest Service, Northeastern Forest Experimental Station, 46.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

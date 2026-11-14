@@ -5,6 +5,7 @@ project:
 website:
   title: "David Connell"
   navbar:
+    search: false
     title: false
     left:
       - href: index.qmd

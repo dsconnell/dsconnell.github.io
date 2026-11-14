@@ -1,1 +1,23 @@
 /* css styles */
+
+/* Align the navigation items with the centered page content. */
+.navbar-container {
+  max-width: 850px;
+  margin-inline: auto;
+}
+
+.quarto-figure figure > p {
+  margin-bottom: 0;
+}
+
+.quarto-figure .figure-img {
+  display: block;
+  margin-bottom: 0;
+}
+
+.quarto-figure figcaption {
+  padding-top: 0;
+  margin-top: 0;
+  color: #fff;
+  font-style: italic;
+}
